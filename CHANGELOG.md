@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v2.0.0) (2024-02-12)
+
+
+### Bug Fixes
+
+* 推送前先拉取远程代码合并 ([fb7ee98](https://github.com/HardenSG/webpack_study/commit/fb7ee98089d4b93f52f3e146f71b1da265160e64))
+
+
+### Features
+
+* 新增推送彩色日志提醒 ([46b98eb](https://github.com/HardenSG/webpack_study/commit/46b98eb75fad40afab86f778fd8364e1f416f748))
+* 新增总结文档模块 ([6a88262](https://github.com/HardenSG/webpack_study/commit/6a882621c3462dcf8116b91ca23d3d2f7ff61324))
+* extract css文件提取 & minimizer css文件压缩 ([8876ae1](https://github.com/HardenSG/webpack_study/commit/8876ae16e795bd1edf6af92f2af5c0d4adeaa105))
+
+
+
 ## [1.2.3](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v1.2.3) (2024-02-12)
 
 
