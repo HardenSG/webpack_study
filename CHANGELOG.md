@@ -1,3 +1,14 @@
+# [2.1.0](https://github.com/HardenSG/webpack_study/compare/v2.0.0...v2.1.0) (2024-02-12)
+
+
+### Features
+
+* 配置eslint、loader、terser多进程构建 ([ce5b717](https://github.com/HardenSG/webpack_study/commit/ce5b717fd10297f7e2aae7bf2978a8ac9e687865))
+* in[ex]clude、js cache配置 & loader细粒度配置抽取 ([e7470ed](https://github.com/HardenSG/webpack_study/commit/e7470ed5a665f8f4304ca66c516524d6c56c2d18))
+* source-map配置 ([661e490](https://github.com/HardenSG/webpack_study/commit/661e49070616945e52b72ae2e66cc714bae9eb5c))
+
+
+
 # [2.0.0](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v2.0.0) (2024-02-12)
 
 
