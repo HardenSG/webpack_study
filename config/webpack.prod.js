@@ -23,5 +23,6 @@ module.exports = merge(baseConfig, {
             new CssMinimizerPlugin()
         ]
     },
-    mode: 'production'
+    mode: 'production',
+    devtool: 'source-map'
 })
