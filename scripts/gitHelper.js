@@ -1,6 +1,7 @@
 const exec = require('exec-sh')
 const inquirer = require('inquirer')
 const { fileUtils } = require('./utils')
+const { logUtils } = require('./constant')
 
 // git commit & tag
 const gitHelper = async () => {
@@ -12,10 +13,10 @@ const gitHelper = async () => {
     await exec.promise('git pull')
     await exec.promise(`git push`)
     if (isNeedTag) {
-        console.log('需要tag，推送远程标签中.....');
+        logUtils.warn('需要tag，推送远程标签中.....');
         await exec.promise(`git tag v${pkg.version}`);
         await exec.promise('git push origin --tags');
-        console.log('推送远程成功🏅');
+        logUtils.success('推送远程成功🏅');
     }
 }
 

@@ -30,6 +30,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
     "exec-sh": "^0.4.0",
     "inquirer": "^8.2.0"
   }

@@ -1,3 +1,17 @@
+## [1.2.2](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v1.2.2) (2024-02-12)
+
+
+### Bug Fixes
+
+* 推送前先拉取远程代码合并 ([fb7ee98](https://github.com/HardenSG/webpack_study/commit/fb7ee98089d4b93f52f3e146f71b1da265160e64))
+
+
+### Features
+
+* 新增推送彩色日志提醒 ([96c5700](https://github.com/HardenSG/webpack_study/commit/96c57008ed8310e25d0a3ac5946c7b8460a79b2c))
+
+
+
 ## [1.2.1](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v1.2.1) (2024-02-12)
 
 
