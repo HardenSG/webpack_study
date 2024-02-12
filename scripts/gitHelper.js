@@ -9,6 +9,7 @@ const gitHelper = async () => {
 
     await exec.promise('git add .');
     await exec.promise(`git commit -m "chore(release): ${pkg.version} feature release"`)
+    await exec.promise('git pull')
     await exec.promise(`git push`)
     if (isNeedTag) {
         console.log('需要tag，推送远程标签中.....');
