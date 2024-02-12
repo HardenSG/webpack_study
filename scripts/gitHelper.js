@@ -6,11 +6,10 @@ const { fileUtils } = require('./utils')
 const gitHelper = async () => {
     const isNeedTag = await chooseUpdateTactics()
     const pkg = fileUtils()
-    console.log(pkg);
 
     await exec.promise('git add .');
     await exec.promise(`git commit -m "chore(release): ${pkg.version} feature release"`)
-    await exec.promise(`git push origin main main`)
+    await exec.promise(`git push`)
     if (isNeedTag) {
         console.log('需要tag，推送远程标签中.....');
         await exec.promise(`git tag v${pkg.version}`);
