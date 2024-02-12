@@ -50,11 +50,11 @@ main() {
         exit $BUILD_RET
     fi
 
-    echo "2. 生成changelog....."
-    logGenertor
-
-    echo "3. 更新版本信息....."
+    echo "2. 更新版本信息....."
     updateVersion
+
+    echo "3. 生成changelog....."
+    logGenertor
 
     echo "4. git actions"
     gitHelper
