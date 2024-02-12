@@ -2,6 +2,7 @@ const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
+const os = require('os')
 const { baseLoader, getEnvLoader } = require('./base-loader')
 
 module.exports = (env = 'prod') => ({
@@ -21,13 +22,15 @@ module.exports = (env = 'prod') => ({
             context: path.resolve(__dirname, 'src'),
             exclude: 'node_modules',
             cache: env === 'prod',
-            cacheLocation: env === 'prod' ? path.resolve(__dirname, '../node_modules/.cache/eslintcache') : undefined
+            cacheLocation: env === 'prod' ? path.resolve(__dirname, '../node_modules/.cache/eslintcache') : undefined,
+            // 开启多进程
+            threads: os.cpus().length
         }),
         // HTML插件
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, '../view/index.html')
         }),
         // 提取CSS文件
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
     ],
 })

@@ -1,7 +1,9 @@
-const { merge } = require('webpack-merge')
-const baseConfig = require('./webpack.base.js')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+const baseConfig = require('./webpack.base.js')
+const { merge } = require('webpack-merge')
 const path = require('path')
+const os = require('os')
 
 module.exports = merge(baseConfig(), {
     output: {
@@ -18,9 +20,15 @@ module.exports = merge(baseConfig(), {
         }
     },
     optimization: {
-        // 压缩css体积
+        // 压缩操作
         minimizer: [
-            new CssMinimizerPlugin()
+            // 压缩css体积
+            new CssMinimizerPlugin(),
+            // 配置压缩插件
+            new TerserWebpackPlugin({
+                // 配置多进程
+                parallel: os.cpus().length
+            })
         ]
     },
     mode: 'production',

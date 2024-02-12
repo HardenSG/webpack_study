@@ -45,6 +45,11 @@ babel需要额外开启options的cache并且关闭cacheCompression
 eslint需要开启cache并且指定cacheLocation
 
 
+#### 多线程构建
+![Alt text](image-1.png)
+需要配置eslint、loader和terser
+
+
 ### 3. 减少代码体积
 
 

@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const os = require('os')
 
 // 基础loader
 const baseLoader = [
@@ -43,13 +44,23 @@ const getEnvLoader = env => [
         test: /\.js$/,
         // 排除node_modules
         exclude: /node_modules|scripts/,
-        loader: 'babel-loader',
-        options: {
-            // 开启babel缓存
-            cacheDirectory: env === 'prod',
-            // 关闭缓存压缩
-            cacheCompression: env === 'dev'
-        }
+        use: [
+            {
+                loader: 'thread-loader',
+                options: {
+                    works: os.cpus().length
+                }
+            },
+            {
+                loader: 'babel-loader',
+                options: {
+                    // 开启babel缓存
+                    cacheDirectory: env === 'prod',
+                    // 关闭缓存压缩
+                    cacheCompression: env === 'dev'
+                }
+            }
+        ]
     }
 ]
 
