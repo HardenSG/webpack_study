@@ -18,6 +18,7 @@ module.exports = merge(baseConfig, {
         }
     },
     optimization: {
+        // 压缩css体积
         minimizer: [
             new CssMinimizerPlugin()
         ]
