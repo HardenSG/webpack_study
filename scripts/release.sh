@@ -23,9 +23,7 @@ builder() {
 gitHelper() {
     git config user.email "2767525216@qq.com"
     git config user.name "HardenSG"
-    git add .
-    git commit -m "chore(release): feautre release"
-    git push origin main main
+    node ./scripts/gitHelper.js
 }
 
 # changelog生成器
@@ -59,7 +57,7 @@ main() {
     echo "4. git actions"
     gitHelper
 
-    echo "release success!!"
+    echo "release success🏅!!"
 }
 
 main
