@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge')
 const baseConfig = require('./webpack.base.js')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const path = require('path')
 
 module.exports = merge(baseConfig, {
@@ -15,6 +16,11 @@ module.exports = merge(baseConfig, {
             // 关闭箭头函数输出
             arrowFunction: false
         }
+    },
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin()
+        ]
     },
     mode: 'production'
 })
