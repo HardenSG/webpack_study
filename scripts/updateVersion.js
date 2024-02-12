@@ -31,6 +31,7 @@ async function release() {
     }
 }
 
+// inquirer选择版本更新策略
 async function chooseUpdateTactics() {
     const options = await inquirer.prompt([
         {
