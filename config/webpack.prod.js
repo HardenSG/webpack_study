@@ -3,7 +3,7 @@ const baseConfig = require('./webpack.base.js')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const path = require('path')
 
-module.exports = merge(baseConfig, {
+module.exports = merge(baseConfig(), {
     output: {
         // 开发模式不需要输出
         path: path.resolve(__dirname, '../dist'),
