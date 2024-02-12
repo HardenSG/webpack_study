@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/HardenSG/webpack_study/compare/v1.2.0...v1.2.1) (2024-02-12)
+
+
+### Bug Fixes
+
+* 推送前先拉取远程代码合并 ([fb7ee98](https://github.com/HardenSG/webpack_study/commit/fb7ee98089d4b93f52f3e146f71b1da265160e64))
+
+
+
 # 1.2.0 (2024-02-12)
 
 
