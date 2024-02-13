@@ -2,11 +2,11 @@
 
 # 构建器
 builder() {
-    npm run prod
-    $PROD_RESULT = $?
-
     npm run dev
     $DEV_RESULT = $?
+
+    npm run prod
+    $PROD_RESULT = $?
 
     if [ $PROD_RESULT -ne 0 ]; then 
         echo "PROD build failure"
