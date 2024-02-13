@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/HardenSG/webpack_study/compare/v2.1.0...v2.2.0) (2024-02-13)
+
+
+### Features
+
+* 新增发包脚本 & 提取confirm逻辑 ([ff6ee75](https://github.com/HardenSG/webpack_study/commit/ff6ee75ba9a5d0bdc29c8e9ce04e4b4d9d2140b1))
+
+
+
 # [2.1.0](https://github.com/HardenSG/webpack_study/compare/v2.0.0...v2.1.0) (2024-02-12)
 
 
