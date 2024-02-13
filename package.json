@@ -14,7 +14,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [],
-  "author": "",
+  "author": "HardenSG <2767525216@qq.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.9",

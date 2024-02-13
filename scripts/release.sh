@@ -38,7 +38,12 @@ updateVersion() {
 
 # 上传npm
 publishNpm() {
+    npm config set registry https://registry.npmjs.org/
     node ./scripts/publish.js
+}
+
+resetLogic() {
+    npm config set registry https://registry.npmmirror.com
 }
 
 # 主逻辑
@@ -65,6 +70,8 @@ main() {
     echo "5. 上传npm"
     publishNpm
 
+    echo "6. 恢复历史设置逻辑"
+    resetLogic
     echo "release success🏅!!"
 }
 
