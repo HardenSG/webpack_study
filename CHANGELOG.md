@@ -1,3 +1,13 @@
+## [2.2.1](https://github.com/HardenSG/webpack_study/compare/v2.2.0...v2.2.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* 调整构建顺序 ([4c9f9c2](https://github.com/HardenSG/webpack_study/commit/4c9f9c2f545f30902a4e1357a12ffd7f9fff4321))
+* 更新发包处理registry源为官网源 ([648657e](https://github.com/HardenSG/webpack_study/commit/648657e82f3749a929532111205edc616a4591e1))
+
+
+
 # [2.2.0](https://github.com/HardenSG/webpack_study/compare/v2.1.0...v2.2.0) (2024-02-13)
 
 
