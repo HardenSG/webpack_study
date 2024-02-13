@@ -1,3 +1,4 @@
+const inquirer = require('inquirer')
 const fs = require('fs')
 const path = require('path')
 
@@ -57,7 +58,30 @@ function fileUtils({
     }
 }
 
+// inquirer 基础确认prompt
+async function baseConfirmInq(prompt) {
+    const options = await inquirer.prompt([
+        {
+            type: 'list',
+            name: 'choice',
+            message: prompt,
+            choices: [
+                {
+                    name: 'YES',
+                    value: true,
+                },
+                {
+                    name: 'NO',
+                    value: false,
+                },
+            ],
+        },
+    ]);
+    return options.choice
+}
+
 module.exports = {
     countVersion,
-    fileUtils
+    fileUtils,
+    baseConfirmInq
 }

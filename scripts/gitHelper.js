@@ -1,11 +1,11 @@
 const exec = require('exec-sh')
 const inquirer = require('inquirer')
-const { fileUtils } = require('./utils')
+const { fileUtils, baseConfirmInq } = require('./utils')
 const { logUtils } = require('./constant')
 
 // git commit & tag
 const gitHelper = async () => {
-    const isNeedTag = await chooseUpdateTactics()
+    const isNeedTag = await baseConfirmInq('是否需要tag？')
     const pkg = fileUtils()
 
     await exec.promise('git add .');
@@ -18,28 +18,6 @@ const gitHelper = async () => {
         await exec.promise('git push origin --tags');
         logUtils.success('推送远程成功🏅');
     }
-}
-
-// inquirer选择是否需要tag
-async function chooseUpdateTactics() {
-    const options = await inquirer.prompt([
-        {
-            type: 'list',
-            name: 'tag',
-            message: '是否需要tag?',
-            choices: [
-                {
-                    name: 'YES',
-                    value: true,
-                },
-                {
-                    name: 'NO',
-                    value: false,
-                },
-            ],
-        },
-    ]);
-    return options.tag
 }
 
 gitHelper()

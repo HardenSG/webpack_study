@@ -36,6 +36,11 @@ updateVersion() {
     node ./scripts/updateVersion.js
 }
 
+# 上传npm
+publishNpm() {
+    node ./scripts/publish.js
+}
+
 # 主逻辑
 main() {
     echo "===== changelog & commit ====="
@@ -56,6 +61,9 @@ main() {
 
     echo "4. git actions"
     gitHelper
+
+    echo "5. 上传npm"
+    publishNpm
 
     echo "release success🏅!!"
 }
