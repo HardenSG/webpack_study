@@ -1,3 +1,12 @@
+## [2.2.2](https://github.com/HardenSG/webpack_study/compare/v2.2.1...v2.2.2) (2024-02-14)
+
+
+### Bug Fixes
+
+* 仍然更新为手动登陆 ([3fd84a3](https://github.com/HardenSG/webpack_study/commit/3fd84a3f095308ad942f0095c5cefd08733fbd5b))
+
+
+
 ## [2.2.1](https://github.com/HardenSG/webpack_study/compare/v2.2.0...v2.2.1) (2024-02-13)
 
 
