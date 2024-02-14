@@ -14,6 +14,11 @@ async function release() {
             action: 'write',
             content: JSON.stringify(pkg, null, 2)
         })
+        fileUtils({
+            action: 'write',
+            rootFile: '../lib/copy/package.json',
+            content: JSON.stringify(pkg, null, 2)
+        })
     }
 }
 

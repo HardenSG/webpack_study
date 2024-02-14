@@ -3,20 +3,6 @@ const inquirer = require('inquirer')
 const { logUtils, PUBLISH_TAG_ENUM } = require('./constant')
 const { baseConfirmInq, fileUtils } = require('./utils')
 
-/**
- * // await exec.promise(`git tag v${pkg.version}`);
-  // await exec.promise('git push origin --tags');
-  // eslint-disable-next-line
-  // if (options.beta) {
-  //   await exec.promise('cd ./dist && npm publish --tag beta');
-  // } else if (options.alpha || options.next) {
-  //   await exec.promise('cd ./dist && npm publish --tag next');
-  // } else {
-  //   await exec.promise('cd ./dist && npm publish');
-  // }
-  await exec.promise('cd ./dist && npm publish --tag alpha');
- */
-
 // npm publish
 const publishHelper = async () => {
     const tagCode = await choosePublishTag()
@@ -79,7 +65,9 @@ async function choosePublishTag() {
 
 // 将 package.json 复制到dist中
 function copyPackageFile() {
-    const pkg = fileUtils()
+    const pkg = fileUtils({
+        rootFile: '../lib/copy/package.json'
+    })
     fileUtils({
         action: 'write',
         rootFile: '../dist/package.json',

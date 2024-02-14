@@ -38,7 +38,9 @@ updateVersion() {
 
 # 上传npm
 publishNpm() {
-    npm config set registry https://registry.npmjs.org/
+    npm config set registry https://registry.npmjs.com/
+    npm config set //registry.npmjs.com/:_authToken=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
+    npm login -d --auth-type=legacy
     node ./scripts/publish.js
 }
 
@@ -71,7 +73,7 @@ main() {
     publishNpm
 
     echo "6. 恢复历史设置逻辑"
-    resetLogic
+    # resetLogic
     echo "release success🏅!!"
 }
 
