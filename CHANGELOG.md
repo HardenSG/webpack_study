@@ -1,3 +1,17 @@
+# [2.3.0](https://github.com/HardenSG/webpack_study/compare/v2.2.1...v2.3.0) (2024-02-16)
+
+
+### Bug Fixes
+
+* 仍然更新为手动登陆 ([3fd84a3](https://github.com/HardenSG/webpack_study/commit/3fd84a3f095308ad942f0095c5cefd08733fbd5b))
+
+
+### Features
+
+* tree-shaking & 减少babel产物体积 & 压缩图片体积（no used） ([fb126de](https://github.com/HardenSG/webpack_study/commit/fb126dedd063dfc591af3af22ecce80ba18da164))
+
+
+
 ## [2.2.2](https://github.com/HardenSG/webpack_study/compare/v2.2.1...v2.2.2) (2024-02-14)
 
 
