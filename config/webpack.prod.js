@@ -1,5 +1,6 @@
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const baseConfig = require('./webpack.base.js')
 const { merge } = require('webpack-merge')
 const path = require('path')
@@ -28,7 +29,36 @@ module.exports = merge(baseConfig(), {
             new TerserWebpackPlugin({
                 // 配置多进程
                 parallel: os.cpus().length
-            })
+            }),
+            // 配置压缩本地图片
+            // ! 速度非常慢.....，没必要使用这个，用小熊猫压缩吧还是
+            // new ImageMinimizerPlugin({
+            //     minimizer: {
+            //         implementation: ImageMinimizerPlugin.imageminGenerate,
+            //         options: {
+            //             plugins: [
+            //                 ['gifsicle', { interlaced: true }],
+            //                 ['jpegtran', { progressive: true }],
+            //                 ['optipng', { optimizationLevel: 5 }],
+            //                 [
+            //                     'svgo',
+            //                     {
+            //                         plugins: [
+            //                             'preset-default',
+            //                             'prefixIds',
+            //                             {
+            //                                 name: 'sortAttrs',
+            //                                 params: {
+            //                                     xmlnsOrder: 'alphabetical'
+            //                                 }
+            //                             }
+            //                         ]
+            //                     }
+            //                 ]
+            //             ]
+            //         }
+            //     }
+            // })
         ]
     },
     mode: 'production',

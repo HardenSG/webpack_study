@@ -55,9 +55,11 @@ const getEnvLoader = env => [
                 loader: 'babel-loader',
                 options: {
                     // 开启babel缓存
-                    cacheDirectory: env === 'prod',
+                    cacheDirectory: true,
                     // 关闭缓存压缩
-                    cacheCompression: env === 'dev'
+                    cacheCompression: false,
+                    // 减少babel体积
+                    plugins: ['@babel/plugin-transform-runtime']
                 }
             }
         ]
